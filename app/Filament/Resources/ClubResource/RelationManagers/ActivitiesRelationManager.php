@@ -32,6 +32,7 @@ class ActivitiesRelationManager extends RelationManager
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('students_count')->counts('students'),
             ])
             ->filters([
                 //
